@@ -53,7 +53,7 @@ function init(el, event) {
 
         d.querySelector("#output").src = URL + encodeURIComponent(text);
 
-        d.querySelector("#output").alt = "qr code";
+        d.querySelector("#output").alt = "Código QR";
 
     } else {
         alert(error);

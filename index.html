@@ -16,41 +16,44 @@
     <!-- Styles -->
     <link rel="stylesheet" href="main.css">
 
-    <title>GENERADOR DE CÓDIGO QR</title>
+    <title>GENERADOR DE CÓDIGOS QR</title>
 </head>
 
 <body>
     <main class="container my-3">
 
         <section>
-            <h1>GENERADOR DE CÓDIGO QR</h1>
-            <p>Introduzca texto o una dirección URL y, a continuación, haga clic en el botón generar código.</p>
+            <h1 class="h1">GENERADOR DE CÓDIGOS QR</h1>
+            <p>Introduzca texto o una dirección URL en el campo contenido y, a continuación, haga clic en el botón
+                generar para ver el código QR.</p>
             <form action="#" method="POST">
                 <div class="table-responsive-md">
                     <table class="table table-bordered">
                         <thead>
                             <tr class="text-center">
-                                <th style="width: 55%;">Contenido</th>
-                                <th style="width: 45%;">Código QR</th>
+                                <th>Contenido</th>
+                                <th>Código QR</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
-                                    <textarea name="text" id="content" class="form-control" rows="5" required
-                                        autocomplete="off" spellcheck="false" autocapitalize="off"
-                                        placeholder="Introduzca texto o una dirección URL."></textarea>
+                                <td style="width: 55%;">
+                                    <textarea name="text" id="content" class="form-control" rows="6" autocomplete="off"
+                                        spellcheck="false" autocapitalize="off"
+                                        placeholder="Introduzca texto o una dirección URL." required></textarea>
                                 </td>
-                                <td class="text-center align-middle"><img id="output" height="150"></td>
+                                <td class="text-center align-middle">
+                                    <img id="output" height="150">
+                                </td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td>
-                                    <button type="submit" class="btn btn-secondary">Generar código</button>
+                                    <button type="submit" class="btn btn-secondary">Generar</button>
                                 </td>
                                 <td class="text-center">
-                                    <button type="reset" class="btn btn-dark">Eliminar código</button>
+                                    <button type="reset" class="btn btn-dark">Eliminar</button>
                                 </td>
                             </tr>
                         </tfoot>
@@ -61,15 +64,23 @@
 
     </main>
 
-    <div class="container">
-        <p style="color: #502000;font-weight: bold;">Referencias:</p>
+    <section class="container">
+        <p>Para descargar en tu dispositivo móvil toca la imagen dos segundos y a continuación selecciona "Descargar
+            imagen".<br>Para descargar en tu computadora has clic derecho con el mouse y selecciona "Guardar imagen
+            como...".</p>
+
+    </section>
+
+    <section class="container">
+        <p class="nota">Referencias</p>
         <ul>
-            <li><a href="https://developers.google.com/chart/infographics/docs/qr_codes?hl=es"
-                    target="_blank">https://developers.google.com/chart/infographics/</a></li>
+            <li><a href="https://developers.google.com/chart/infographics/docs/qr_codes?hl=es" target="_blank">Códigos
+                    QR Google Developers</a></li>
         </ul>
-    </div>
+    </section>
+
     <footer class="mt-auto py-3 text-center">
-        <p class="small text-muted">Copyright © 2023 | Powered by Julio Cesar</p>
+        <p class="small text-muted">Copyright © 2023 | Powered by Julio Cesar 👨‍🏫</p>
     </footer>
 
     <script src="main.js"></script>

@@ -1,4 +1,4 @@
-h1 {
+.h1 {
     color: #A00000;
     padding-top: 15px;
     font-size: 100%;
@@ -9,3 +9,7 @@ table th {
     color: #502000;
 }
 
+.nota {
+    color: #502000;
+    font-weight: bold;
+}
