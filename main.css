@@ -1,15 +1,38 @@
+*:hover,
+*:focus,
+*:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    border-color: initial;
+}
+
 .h1 {
-    color: #A00000;
+    color: #0d6efd;
     padding-top: 15px;
     font-size: 100%;
     font-weight: bold;
 }
 
-table th {
-    color: #502000;
+#dark-mode-button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: emoji;
+    line-height: 1;
+    font-size: 22px;
 }
 
-.nota {
-    color: #502000;
-    font-weight: bold;
+.dark {
+    background-color: rgb(28, 27, 34);
+    /*#1c1b22*/
+    color: rgb(251, 251, 254);
+}
+
+#dark-mode-button:focus {
+    outline: none;
 }

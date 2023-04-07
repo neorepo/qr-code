@@ -17,13 +17,45 @@
     <link rel="stylesheet" href="main.css">
 
     <title>GENERADOR DE CÓDIGOS QR</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnEl = document.querySelector('#dark-mode-button');
+            if (localStorage.getItem('theme')) { darkLightTheme(btnEl); }
+            initDarkLightTheme(btnEl);
+        });
+
+        function initDarkLightTheme(el) {
+            el.onclick = function (e) { return darkLightTheme(this); }
+        }
+
+        function darkLightTheme(el) {
+            if (el.innerText === '🌙') {
+                el.innerText = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                el.innerText = '🌙';
+                localStorage.removeItem('theme');
+            }
+            document.querySelector('body').classList.toggle('dark');
+            if (document.querySelector('.table'))
+                document.querySelector('.table').classList.toggle('dark');
+        }
+    </script>
 </head>
 
 <body>
     <main class="container my-3">
 
         <section>
-            <h1 class="h1">GENERADOR DE CÓDIGOS QR</h1>
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1 class="h1">GENERADOR DE CÓDIGOS QR</h1>
+                </div>
+                <div class="col-auto">
+                    <button id="dark-mode-button">🌙</button>
+                </div>
+            </div>
             <p>Introduzca texto o una dirección URL en el campo contenido y, a continuación, haga clic en el botón
                 generar para ver el código QR.</p>
             <form action="#" method="POST">
@@ -40,7 +72,8 @@
                                 <td style="width: 55%;">
                                     <textarea name="text" id="content" class="form-control" rows="6" autocomplete="off"
                                         spellcheck="false" autocapitalize="off"
-                                        placeholder="Introduzca texto o una dirección URL." required></textarea>
+                                        placeholder="Solo se permite introducir 300 caracteres." maxlength="300"
+                                        required></textarea>
                                 </td>
                                 <td class="text-center align-middle">
                                     <img id="output" height="150">
@@ -72,7 +105,7 @@
     </section>
 
     <section class="container">
-        <p class="nota">Referencias</p>
+        <p style="font-weight: bold;">Referencias</p>
         <ul>
             <li><a href="https://developers.google.com/chart/infographics/docs/qr_codes?hl=es" target="_blank">Códigos
                     QR Google Developers</a></li>
