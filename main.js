@@ -49,7 +49,7 @@ function init(el, event) {
 
     if (!error) {
 
-        const URL = "https://chart.googleapis.com/chart?cht=qr&chs=300x300&chld=L|1&chl=";
+        const URL = "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chld=L|1&chl=";
 
         d.querySelector("#output").src = URL + encodeURIComponent(text);
 
